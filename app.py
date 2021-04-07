@@ -12,7 +12,7 @@ tfidf_vectorizer = pickle.load(tfid)
 def home():
  	return render_template("index.html")
 
-@app.route('/newscheck',methods=['GET'])
+@app.route('/newscheck',methods=['POST'])
 def newscheck():	
 	abc = request.args.get('news')	
 	input_data = [abc.rstrip()]
