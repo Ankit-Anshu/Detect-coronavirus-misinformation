@@ -22,6 +22,5 @@ def newscheck():
 	y_pred = pac.predict(tfidf_test)
 	return jsonify(result = y_pred[0])
 
-if __name__ == '__main__':
-    from werkzeug.serving import run_simple
-    run_simple('localhost', 9000, app)
+if __name__ == "__main__":
+    app.run(debug=True)
